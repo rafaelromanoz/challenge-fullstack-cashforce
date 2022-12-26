@@ -5,8 +5,12 @@
     "target": "es2019",
     "esModuleInterop": true,
     "sourceMap": true,
+    "strictNullChecks": true,
     "rootDir": "src",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  }
+    "emitDecoratorMetadata": true,
+  },
+  "include": [
+    "src"
+  ]
 }
