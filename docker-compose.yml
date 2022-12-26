@@ -2,10 +2,9 @@ version: '3'
 
 services:
   mysql:
-    image: mysql
     container_name: cashforce
+    image: mysql
     environment:
-      environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
       - MYSQL_DATABASE=cashforce_v3
     restart: always
