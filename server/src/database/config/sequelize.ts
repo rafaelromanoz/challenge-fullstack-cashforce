@@ -2,6 +2,7 @@ import { Sequelize } from 'sequelize-typescript'
 import { Buyer } from '../models/Buyer'
 import { Cnpj } from '../models/Cnpj'
 import { Order } from '../models/Order'
+import { Provider } from '../models/Provider'
 import { User } from '../models/User'
 
 export const sequelize = new Sequelize({
@@ -9,7 +10,7 @@ export const sequelize = new Sequelize({
   dialect: 'mysql',
   username: 'root',
   password: '',
-  models: [Cnpj, Order, User, Buyer],
+  models: [Cnpj, Order, User, Buyer, Provider],
   storage: ':memory:',
   repositoryMode: true
 })
