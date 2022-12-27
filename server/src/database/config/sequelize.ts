@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize-typescript'
-import { Buyers } from '../models/Buyer';
+import { Cnpj } from '../models/Cnpj'
+import { Order } from '../models/Order'
 
 export const sequelize = new Sequelize({
   database: 'cashforce_v3',
@@ -7,6 +8,7 @@ export const sequelize = new Sequelize({
   username: 'root',
   password: '',
   storage: ':memory:',
-  models: [Buyers],
-  repositoryMode: true,
+  repositoryMode: true
 })
+
+sequelize.addModels([Cnpj, Order])
