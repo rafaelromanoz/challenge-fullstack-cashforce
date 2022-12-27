@@ -1,1 +1,10 @@
 /* app global css */
+
+@font-face {
+  font-family: 'DM Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+}
+
+.my-font {
+  font-family: 'DM Sans', sans-serif;
+}
