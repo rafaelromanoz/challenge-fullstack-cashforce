@@ -1,5 +1,7 @@
 import { Table, Column, Model, AutoIncrement, PrimaryKey, ForeignKey, BelongsTo } from 'sequelize-typescript'
+import { Buyer } from './Buyer'
 import { Cnpj } from './Cnpj'
+import { User } from './User'
 
 @Table({ tableName: 'orders' })
 export class Order extends Model {
@@ -38,10 +40,39 @@ export class Order extends Model {
   @Column
     value: string
 
+  @Column
+    orderStatusBuyer: string
+
+  @Column
+    orderStatusProvider: string
+
+  @Column
+    deliveryReceipt: string
+
+  @Column
+    cargoPackingList: string
+
+  @Column
+    deliveryCtrc: string
+
   @BelongsTo(() => Cnpj)
     cnpjs: Cnpj
+
+  @BelongsTo(() => User)
+    user: User
+
+  @BelongsTo(() => Buyer)
+    buyer: Buyer
+
+  @ForeignKey(() => Buyer)
+  @Column
+    buyerId: string
 
   @ForeignKey(() => Cnpj)
   @Column
     cnpjId: string
+
+  @ForeignKey(() => User)
+  @Column
+    userId: string
 }
