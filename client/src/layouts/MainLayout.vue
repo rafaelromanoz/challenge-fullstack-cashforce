@@ -7,12 +7,14 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      style="background-color: #FBFDFE"
     >
       <q-list>
         <q-item-label
           header
         >
-          menus
+          <q-img src="images/Logo-1-2ed76cfa-585x108.jpeg"></q-img>
+          <q-item class="q-item">Notas fiscais</q-item>
         </q-item-label>
 
       </q-list>
@@ -27,15 +29,6 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 
-const linksList = [
-  {
-    title: 'Home',
-    caption: '',
-    icon: 'home',
-    route: { name: 'home' }
-  }
-]
-
 export default defineComponent({
   name: 'MainLayout',
 
@@ -43,7 +36,6 @@ export default defineComponent({
     const leftDrawerOpen = ref(false)
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
@@ -52,3 +44,10 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+  .q-item {
+    color: #00AD8C;
+    text-align: center;
+  }
+</style>
