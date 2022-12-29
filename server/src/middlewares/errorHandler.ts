@@ -12,6 +12,5 @@ export default (
     res.status(statusCode).json({ message })
     return next()
   }
-  console.log(err)
   return res.status(500).json({ message: 'internal error' })
 }
