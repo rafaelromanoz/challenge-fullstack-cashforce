@@ -8,8 +8,9 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
       - MYSQL_DATABASE=cashforce_v3
     volumes:
-      - ./src/database/data:/var/lib/mysql
-      - ./server/database/mysql-dump:/docker-entrypoint-initdb.d
+      - /var/db/startuphry/mysql:/var/lib/mysql
+      - ./conf/my.cnf:/etc/mysql/conf.d/settings.cnf
+      - ./conf/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
     restart: always
     ports:
       - "3306:3306"
