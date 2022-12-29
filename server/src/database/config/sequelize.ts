@@ -10,6 +10,8 @@ export const sequelize = new Sequelize({
   dialect: 'mysql',
   username: 'root',
   password: '',
+  port: 3306,
+  host: 'mysql',
   models: [Cnpj, Order, User, Buyer, Provider],
   storage: ':memory:',
   repositoryMode: true

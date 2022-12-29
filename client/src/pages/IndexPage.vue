@@ -9,11 +9,10 @@
     <template v-slot:body-cell-actions="props">
       <q-td :props="props">
         <q-btn
-        color="white"
-        text-color="black"
-        label="Dados do cedente"
-        dense
-        ></q-btn>
+          label="Dados do cedente"
+          class="btn-actions"
+          >
+        </q-btn>
       </q-td>
     </template>
   </q-table>
@@ -65,16 +64,21 @@ export default defineComponent({
           style: 'currency',
           currency: 'BRL'
         }),
-        label: 'VALOR'
+        label: 'VALOR',
+        style: 'color: #00AD8C'
       },
       {
         name: 'Status',
         align: 'left',
         field: (row) => getMessageOrderStatusBuyer(row.orderStatusBuyer),
-        label: 'Status'
+        label: 'Status',
+        style: 'color: #00AD8C'
       },
       {
-        name: 'actions', align: 'right', field: 'actions', label: 'Ações'
+        name: 'actions',
+        align: 'center',
+        field: 'actions',
+        label: 'Ações'
       }
     ]
 
@@ -85,3 +89,15 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+  .btn-actions {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #727D94;
+    border-radius: 24px;
+  }
+</style>

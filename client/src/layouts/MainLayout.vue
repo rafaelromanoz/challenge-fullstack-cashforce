@@ -12,12 +12,17 @@
       <q-list>
         <q-item-label
           header
-        >
+          >
           <q-img src="images/Logo-1-2ed76cfa-585x108.jpeg"></q-img>
-          <q-item class="q-item">Notas fiscais</q-item>
-        </q-item-label>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="handshake"/>
+            </q-item-section>
+           <q-item-section>Notas fiscais</q-item-section>
+        </q-item>
+      </q-item-label>
+    </q-list>
 
-      </q-list>
     </q-drawer>
 
     <q-page-container>
@@ -48,6 +53,7 @@ export default defineComponent({
 <style>
   .q-item {
     color: #00AD8C;
-    text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
   }
 </style>
