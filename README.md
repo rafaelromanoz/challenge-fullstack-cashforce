@@ -14,10 +14,10 @@ O projeto todo foi dockerizado (server, banco de dados e o client), para rodar o
 docker-compose up -d
 ```
 
-Após a build o server do projeto estará funcionando na seguinte URL:
+Após a build o projeto estará funcionando na seguinte URL:
 
 ```
-Frontend: http://localhost:8080/#/
+http://localhost:8080/#/
 
 ```
 
