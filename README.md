@@ -80,8 +80,7 @@ Tentei meu máximo e consegui resolver a maioria, foi um teste bem divertido!
 
 ## 🛠️ Construído com
 
-* [JavaScript](javascript.com) - Linguagem
-* [TypeScript](https://www.typescriptlang.org/) - Linguagem backend
+* [TypeScript](https://www.typescriptlang.org/) - Linguagem
 * [MySQL](https://www.mysql.com/) - Banco de Dados
 * [Express](https://expressjs.com/pt-br/) - Criação API
 * [Node.js](https://nodejs.org/en/) - Criação API
